@@ -5,7 +5,7 @@ conn = mysql.connector.connect(
 		user="training",
         host="188.166.221.246",
         password ="training",
-        database=""
+        database="retail_db"
 		)
   
 # Creating a cursor object using
@@ -13,7 +13,7 @@ conn = mysql.connector.connect(
 mycursor = conn.cursor();
   
 # SQL Query
-sql = "select * from ** where ** >= 3;"
+sql = "select department_name from departments where department_id >= 3;"
   
 # Executing query
 mycursor.execute(sql)
