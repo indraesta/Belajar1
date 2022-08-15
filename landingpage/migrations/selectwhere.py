@@ -13,7 +13,7 @@ conn = mysql.connector.connect(
 mycursor = conn.cursor();
   
 # SQL Query
-sql = "select department_name from departments where department_id >= 3;"
+sql = "select department_name from departments where department_id >= 6;"
   
 # Executing query
 mycursor.execute(sql)
