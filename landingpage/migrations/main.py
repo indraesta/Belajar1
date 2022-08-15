@@ -22,11 +22,11 @@ def dept():
         conn.close()  
 
 @app.route('/dept/')
-def dept_details(dept_id):
+def dept_details(department_id):
     try:
         conn = mysql.connect()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute("SELECT  department_name FROM departments WHERE department_id =%s", dept_id)
+        cursor.execute("SELECT  department_name FROM departments WHERE department_id =%s", department_id)
         deptRow = cursor.fetchone()
         respone = jsonify(deptRow)
         respone.status_code = 200
