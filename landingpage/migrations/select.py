@@ -5,13 +5,13 @@ dataBase = mysql.connector.connect(
   host ="188.166.221.246",
   user ="training",
   passwd ="training",
-  database = ""
+  database = "retail_db"
 )
  
 # preparing a cursor object
 cursorObject = dataBase.cursor()
   
-query = "SELECT **,  ** FROM **"
+query = "SELECT department_id,  department_name FROM departments"
 cursorObject.execute(query)
    
 myresult = cursorObject.fetchall()
