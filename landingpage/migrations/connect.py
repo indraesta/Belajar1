@@ -6,10 +6,8 @@ dataBase = mysql.connector.connect(
   user ="training",
   passwd ="training"
 )
-
-if dataBase.is_connected();
-print("Berhasil connect"dataBase)
-
-
+ 
+print(dataBase)
+  
 # Disconnecting from the server
 dataBase.close()
