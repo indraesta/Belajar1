@@ -21,7 +21,7 @@ def dept():
         cursor.close() 
         conn.close()  
 
-@app.route('/dept/')
+@app.route('/dept/<department_id>')
 def dept_details(department_id):
     try:
         conn = mysql.connect()
